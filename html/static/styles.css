@@ -1,0 +1,611 @@
+html {
+      scroll-behavior: smooth;
+      /* Active le slide vertical fluide */
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #346EFD 0%, #5B8EFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(52, 110, 253, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    }
+
+    /* Feature 1 */
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes progressFill {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 25%;
+      }
+
+    }
+
+    @keyframes cursorMove {
+      0% {
+        opacity: 0;
+        transform: translate(20px, 90px);
+      }
+
+      10% {
+        opacity: 1;
+        transform: translate(20px, 90px);
+      }
+
+      30% {
+        opacity: 1;
+        transform: translate(200px, 10px);
+      }
+
+      35% {
+        transform: translate(200px, 50px) scale(0.9);
+      }
+
+      40% {
+        transform: translate(200px, 50px) scale(1);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translate(200px, 50px);
+      }
+
+      70% {
+        opacity: 0;
+        transform: translate(200px, 50px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(20px, 90px);
+      }
+    }
+
+    @keyframes optionHover {
+      0% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: translateX(0);
+      }
+
+      30% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: translateX(0);
+      }
+
+      35% {
+        background-color: #f8fafc;
+        border-color: #cbd5e1;
+        transform: translateX(2px);
+      }
+
+      40% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: translateX(0);
+      }
+
+      100% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes selectAnswer {
+      0% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: scale(1);
+      }
+
+      40% {
+        background-color: white;
+        border-color: #e2e8f0;
+        transform: scale(1);
+      }
+
+      45% {
+        background-color: #eff6ff;
+        border-color: #3b82f6;
+        transform: scale(0.98);
+      }
+
+      50% {
+        background-color: #eff6ff;
+        border-color: #3b82f6;
+        transform: scale(1);
+      }
+
+      100% {
+        background-color: #eff6ff;
+        border-color: #3b82f6;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes showCheck {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      55% {
+        opacity: 1;
+        transform: scale(1.3);
+      }
+
+      60% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideUpNotification {
+      0% {
+        opacity: 0;
+        transform: translateY(120%);
+      }
+
+      60% {
+        opacity: 0;
+        transform: translateY(120%);
+      }
+
+      70% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes buttonAppear {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      70% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quiz-container {
+      animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .progress-bar {
+      animation: progressFill 1s ease-out 0.3s forwards;
+    }
+
+    .cursor {
+      animation: cursorMove 8s ease-in-out infinite;
+    }
+
+    .option-hover {
+      animation: optionHover 8s ease-in-out infinite;
+    }
+
+    .option-selected {
+      animation: selectAnswer 8s ease-in-out infinite;
+    }
+
+    .checkmark {
+      animation: showCheck 8s ease-in-out infinite;
+    }
+
+    .feedback-notification {
+      animation: slideUpNotification 8s ease-in-out infinite;
+    }
+
+    .next-button {
+      animation: buttonAppear 8s ease-in-out infinite;
+    }
+
+    /* Feature 2 */
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInMessage {
+
+      0%,
+      7.7%,
+      100% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      15.4%,
+      84.6% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      92.3%,
+      100% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+    }
+
+    @keyframes slideInTyping {
+
+      0%,
+      30.8%,
+      100% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      38.5%,
+      58.5% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      66.2%,
+      100% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+
+    @keyframes slideInResponse {
+
+      0%,
+      61.5%,
+      100% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      69.2%,
+      84.6% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      92.3%,
+      100% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+
+    @keyframes pulseTyping {
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .chat-container {
+      animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .user-message {
+      animation: slideInMessage 6.5s ease-out infinite;
+    }
+
+    .typing-indicator {
+      animation: slideInTyping 6.5s ease-out infinite;
+    }
+
+    .typing-dot {
+      animation: pulseTyping 1.4s ease-in-out infinite;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .ai-response {
+      animation: slideInResponse 6.5s ease-out infinite;
+    }
+
+    /* Feature 3 */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Durée totale de l'animation ajustée à 10 secondes */
+
+    @keyframes slideInMessage {
+
+      0%,
+      10.7%,
+      100% {
+        /* De 0% à 10.7% (0s à 1.07s) et 100% (10s) */
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      18.4%,
+      84.6% {
+        /* De 18.4% à 84.6% (1.84s à 8.46s) */
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      92.3%,
+      100% {
+        /* De 92.3% à 100% (9.23s à 10s) */
+        opacity: 0;
+        transform: translateY(8px);
+      }
+    }
+
+    @keyframes slideInThinking {
+
+      0%,
+      30.8%,
+      100% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      38.5%,
+      58.5% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      66.2%,
+      100% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+    }
+
+    @keyframes slideInDiagram {
+
+      0%,
+      61.5%,
+      100% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      69.2%,
+      84.6% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      92.3%,
+      100% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+    }
+
+    @keyframes pulseTyping {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes drawArrow {
+      from {
+        stroke-dashoffset: 150;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fadeInElement {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    /* Changement de la durée de l'itération à 10s */
+    .user-message {
+      animation: slideInMessage 10s ease-out infinite;
+    }
+
+    /* Changement de la durée de l'itération à 10s */
+    .thinking-indicator {
+      animation: slideInThinking 10s ease-out infinite;
+    }
+
+    .thinking-dot {
+      animation: pulseTyping 1.4s ease-in-out infinite;
+    }
+
+    .thinking-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .thinking-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    /* Changement de la durée de l'itération à 10s */
+    .diagram-container {
+      animation: slideInDiagram 10s ease-out infinite;
+    }
+
+    /* Animations du cycle de l'eau - Délais réajustés pour 10s */
+
+    .sun {
+      animation: fadeInElement 0.5s ease-out 4s forwards, fadeInElement 0.5s ease-out 10s forwards;
+      opacity: 0;
+    }
+
+    .ocean {
+      animation: fadeInElement 0.5s ease-out 4.2s forwards, fadeInElement 0.5s ease-out 10.2s forwards;
+      opacity: 0;
+    }
+
+    .evaporation-arrow {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: drawArrow 0.6s ease-out 4.4s forwards, drawArrow 0.6s ease-out 10.4s forwards;
+      /* Durée de l'effet ajustée à 0.6s */
+    }
+
+    .cloud {
+      animation: fadeInElement 0.5s ease-out 4.7s forwards, fadeInElement 0.5s ease-out 10.7s forwards;
+      opacity: 0;
+    }
+
+    .rain-arrow {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: drawArrow 0.6s ease-out 5s forwards, drawArrow 0.6s ease-out 11s forwards;
+      /* Durée de l'effet ajustée à 0.6s */
+    }
+
+    .mountain {
+      animation: fadeInElement 0.5s ease-out 5.3s forwards, fadeInElement 0.5s ease-out 11.3s forwards;
+      opacity: 0;
+    }
+
+    .river-arrow {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: drawArrow 0.6s ease-out 5.6s forwards, drawArrow 0.6s ease-out 11.6s forwards;
+      /* Durée de l'effet ajustée à 0.6s */
+    }
+
+    .label {
+      animation: fadeInElement 0.3s ease-out 5.9s forwards, fadeInElement 0.3s ease-out 11.9s forwards;
+      opacity: 0;
+    }
+
+    .message-hover:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }

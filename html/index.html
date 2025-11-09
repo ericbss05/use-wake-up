@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wake Up - Réussis tes examens en 2x moins de temps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#346EFD",
+            "background-light": "#FFFFFF",
+            "background-dark": "#131022",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+        },
+      },
+    }
+  </script>
+  
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 dark:border-gray-700">
+        <div class="flex items-center gap-1 text-[#100d1b] dark:text-white">
+          <div class="text-primary">
+            <a href="#">
+            <img src="static/images/Logo-black.svg" alt="Wake Up Logo"
+              class="h-8 w-8 object-contain" />
+          </div>
+          <h2 class="text-lg font-bold tracking-[-0.015em]">ake up</h2>
+          </a>
+        </div>
+
+        <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+          <nav class="flex items-center gap-9">
+            <a class="text-[#100d1b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition"
+              href="#avantages">Avantages</a>
+            <a class="text-[#100d1b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition"
+              href="#comment_ca_marche">Comment ça marche</a>
+            <a class="text-[#100d1b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition"
+              href="#a_venir">A venir</a>
+            <a class="text-[#100d1b] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition"
+              href="#faq">FAQ</a>
+          </nav>
+          <div class="flex gap-2">
+            <button
+              class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 text-primary text-sm font-bold tracking-[0.015em] hover:bg-primary/10 transition">
+              <span class="truncate">Réserver ma place</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 sm:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-12 items-center lg:grid-cols-1">
+
+      <!-- Texte -->
+      <div class="flex flex-col gap-6 text-center relative fade-in">
+        <!-- Badge -->
+        <div class="flex justify-center"></div>
+
+        <h1 class="text-4xl font-black tracking-tighter sm:text-5xl lg:text-6xl text-black dark:text-white">
+          Réussis tes examens<br />
+          <span class="gradient-text">plus rapidement</span>, sans stress
+        </h1>
+
+        <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          Upload tes cours, pose tes questions, génère des schémas. Tout centralisé sur une plateforme. Plus besoin de jongler entre plusieurs apps.
+        </p>
+
+        <!-- Features Grid -->
+        <div class="max-w-4xl mx-auto mt-8 text-center">
+        
+
+          <!-- Benefits badges -->
+          <div class="flex flex-wrap gap-6 mt-8 justify-center">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                🚀 Reçois toutes les infos et participe à la co-création de Wake Up
+              </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                5 techniques scientifiques pour reviser efficacement
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input + Bouton -->
+        <div class="mt-6 flex justify-center gap-2 flex-wrap">
+          <input type="email" placeholder="ton-email@exemple.fr"
+            class="h-12 px-4 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-base" />
+          <button
+            class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-[0.015em] hover:bg-opacity-90 transition shadow-lg shadow-primary/30">
+            Réserver ma place →
+          </button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="mt-12">
+        <img
+          class="w-full h-80 lg:h-[550px] bg-center bg-no-repeat bg-cover rounded-xl shadow-2xl shadow-primary/20"
+          alt="Dashboard Wake Up" src="static/images/main_mockup.png">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Comparison Section -->
+    <section id="avantages" class="py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-center text-black dark:text-white sm:text-4xl mb-12">
+        Révisions classiques <span class="bg-primary px-2 text-white rounded">vs</span> Wake Up
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div
+          class="bg-white dark:bg-[#1f1a30] border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg flex flex-col">
+          <div class="p-6 border-b border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold text-gray-600 dark:text-gray-400 tracking-wider uppercase">
+              MÉTHODE CLASSIQUE
+            </h3>
+          </div>
+
+          <ul class="flex-grow p-6 space-y-4">
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <div>
+                <p class="font-semibold"><span class="text-red-500">✕</span> Tu relis 3 fois sans retenir</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <div>
+                <p class="font-semibold"><span class="text-red-500">✕</span> Anki pour flashcards, Notion pour notes, ChatGPT pour questions</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <div>
+                <p class="font-semibold"><span class="text-red-500">✕</span> Tu ne sais pas ce que tu maîtrises vraiment</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <div>
+                <p class="font-semibold"><span class="text-red-500">✕</span> Motivation qui s'effondre au bout de 2h</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <div>
+                <p class="font-semibold"><span class="text-red-500">✕</span> Pas de méthode, juste du bachotage</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="p-4 bg-gray-50 dark:bg-black/20 rounded-b-xl text-center">
+            <p class="text-gray-800 dark:text-gray-300 font-bold text-lg">Apprentissage passif</p>
+            <p class="text-sm text-[#594c9a] dark:text-gray-400">Temps perdu, résultats aléatoires</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-[#1f1a30] border border-primary/50 dark:border-primary/70 rounded-xl shadow-lg flex flex-col scale-[1.02] transition-transform duration-300">
+          <div class="p-6 border-b border-primary/20 dark:border-primary/40">
+            <h3 class="text-lg font-bold text-primary tracking-wider uppercase">
+              AVEC WAKE UP
+            </h3>
+          </div>
+
+          <ul class="flex-grow p-6 space-y-4">
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <span class="text-green-500 mr-3 mt-1 text-2xl">✓</span>
+              <div>
+                <p class="font-semibold">Tu <strong>testes</strong> ta compréhension (active recall)</p>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <span class="text-green-500 mr-3 mt-1 text-2xl">✓</span>
+              <div>
+                <p class="font-semibold">Tout au même endroit : quiz, schémas, explications</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <span class="text-green-500 mr-3 mt-1 text-2xl">✓</span>
+              <div>
+                <p class="font-semibold">L'IA t'indique tes lacunes et te conseils en consequence</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <span class="text-green-500 mr-3 mt-1 text-2xl">✓</span>
+              <div>
+                <p class="font-semibold">Sessions courtes mais efficaces (Feynman)</p>
+              </div>
+            </li>
+            <li class="flex items-start text-[#1F2937] dark:text-gray-300">
+              <span class="text-green-500 mr-3 mt-1 text-2xl">✓</span>
+              <div>
+                <p class="font-semibold">Méthode scientifique, pas de hasard</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="p-4 bg-primary/10 dark:bg-primary/20 rounded-b-xl text-center">
+            <p class="text-primary font-bold text-lg">Apprentissage actif</p>
+            <p class="text-sm text-[#594c9a] dark:text-gray-300">Méthode éprouvée, efficacité maximale</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="comment_ca_marche" class="py-16 bg-white dark:bg-background-dark">
+    <div class="text-center max-w-2xl mx-auto mb-12 px-4">
+      <h2 class="text-3xl font-semibold text-black dark:text-white">
+        Comment ça marche
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-gray-400 mt-2">
+        Wake Up analyse tes cours et crée un parcours d'apprentissage personnalisé. Tout est automatique, tu te
+        concentres sur l'essentiel : apprendre.
+      </p>
+    </div>
+
+    <!-- Feature 1 -->
+    <div class="px-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <div class="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 p-6 relative">
+            <div class="quiz-container bg-white rounded-xl shadow-2xl overflow-visible relative">
+              <div class="px-4 py-3">
+                <div class="flex items-center justify-between mb-2">
+                  <h1 class="text-sm font-semibold">AI Quiz Design</h1>
+                  <div class="text-xs font-medium">1 sur 4</div>
+                </div>
+
+                <div class="relative">
+                  <div class="text-[10px] mb-1">Progression</div>
+                  <div class="w-full bg-black/20 rounded-full h-1.5 overflow-hidden backdrop-blur-sm">
+                    <div class="progress-bar h-full bg-blue-500 rounded-full shadow-lg" style="width: 0%"></div>
+                  </div>
+                  <div class="text-[10px] mt-0.5 text-right">15%</div>
+                </div>
+              </div>
+
+              <div class="p-4 relative overflow-visible">
+                <div class="mb-4">
+                  <div
+                    class="inline-block bg-blue-50 text-blue-700 text-[10px] font-semibold px-2 py-0.5 rounded-full mb-2">
+                    Question à choix multiple
+                  </div>
+                  <h2 class="text-sm font-semibold text-slate-800 leading-relaxed">
+                    Quelle est la fonction principale du générateur de Quiz IA ?
+                  </h2>
+                </div>
+
+                <div class="space-y-2 mb-3 relative">
+
+                  <div
+                    class="option-hover border-2 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 bg-white transition-all">
+                    <div
+                      class="flex-shrink-0 w-5 h-5 rounded bg-slate-100 flex items-center justify-center text-slate-600 font-semibold text-[10px]">
+                      A
+                    </div>
+                    <p class="text-slate-700 text-xs leading-tight">Convertir des documents en quiz</p>
+                  </div>
+
+                  <div
+                    class="option-selected border-2 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 bg-white transition-all relative">
+                    <div
+                      class="flex-shrink-0 w-5 h-5 rounded bg-slate-100 flex items-center justify-center text-slate-600 font-semibold text-[10px]">
+                      B
+                    </div>
+                    <p class="text-slate-700 text-xs leading-tight flex-1">Quiz adaptés au niveau</p>
+
+                    <div class="checkmark right-2 top-1/2 -translate-y-1/2">
+                      <div class="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="border-2 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 bg-white transition-all opacity-50">
+                    <div
+                      class="flex-shrink-0 w-5 h-5 rounded bg-slate-100 flex items-center justify-center text-slate-600 font-semibold text-[10px]">
+                      C
+                    </div>
+                    <p class="text-slate-700 text-xs leading-tight">Proposer des cours vidéo</p>
+                  </div>
+
+                  <div
+                    class="border-2 border-slate-200 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 bg-white transition-all opacity-50">
+                    <div
+                      class="flex-shrink-0 w-5 h-5 rounded bg-slate-100 flex items-center justify-center text-slate-600 font-semibold text-[10px]">
+                      D
+                    </div>
+                    <p class="text-slate-700 text-xs leading-tight">Créer des jeux éducatifs</p>
+                  </div>
+
+                  <div class="cursor absolute pointer-events-none z-50" style="left: 0; top: 0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 3L19 12L12 13L9 20L5 3Z" fill="#1e293b" stroke="white" stroke-width="1.5"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t border-slate-200">
+                  <button
+                    class="px-3 py-1.5 text-slate-600 text-xs font-medium rounded hover:bg-slate-100 transition-all flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Précédent
+                  </button>
+
+                  <button
+                    class="next-button px-4 py-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold rounded hover:shadow-lg transition-all flex items-center gap-1">
+                    Suivant
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Feedback Notification (Superposée) -->
+                <div
+                  class="feedback-notification absolute left-0 right-0 bottom-0 px-4 pb-4 pointer-events-none z-[60]">
+                  <div
+                    class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-3 shadow-2xl pointer-events-auto">
+                    <div class="flex items-start gap-2">
+                      <div class="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                          </path>
+                        </svg>
+                      </div>
+                      <div class="flex-1">
+                        <h3 class="text-blue-900 font-semibold mb-1 text-xs">Excellente réponse !</h3>
+                        <p class="text-blue-800 text-[10px] leading-relaxed">
+                          Le Quiz IA analyse ton niveau et crée des questions personnalisées qui s'adaptent à tes points
+                          forts et faibles.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="mt-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-2">Quiz IA adaptatifs</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            L’IA analyse tes cours et crée des quiz adaptés à ton niveau. Chaque question cible tes lacunes pour que tu passes moins de temps sur ce que tu maîtrises déjà et te concentres sur l’essentiel.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="p-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+          <div class=" rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div class="bg-blue-500 p-6 relative">
+              <div class="chat-container bg-white rounded-xl shadow-2xl overflow-hidden relative">
+                <div class="px-4 py-5">
+                  <div class="flex items-center justify-between mb-2">
+                    <h1 class="text-sm font-semibold flex items-center gap-2">
+                      <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                        </path>
+                      </svg>
+                      Chat IA Assistant
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="p-4 relative"
+                  style="min-height: 280px; background: linear-gradient(to bottom, #fefefe 0%, #f8f9fa 100%);">
+                  <!-- Message utilisateur aligné à droite -->
+                  <div class="user-message relative mb-4 flex justify-end" style="z-index: 10;">
+                    <div class="flex items-end gap-2 flex-row-reverse">
+                      <!-- Avatar -->
+                      <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                            clip-rule="evenodd">
+                          </path>
+                        </svg>
+                      </div>
+
+                      <!-- Bulle -->
+                      <div class="rounded-2xl rounded-tr-sm px-3 py-2 max-w-[100%]">
+                        <div class="text-[11px] leading-relaxed">Explique-moi la photosynthèse</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Indicateur de frappe -->
+                  <div class="typing-indicator relative mt-auto" style="z-index: 10;">
+                    <div class="flex items-start gap-2">
+                      <div
+                        class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                          </path>
+                        </svg>
+                      </div>
+                      <div class="bg-slate-100 rounded-2xl rounded-tl-sm px-4 py-3 shadow-md">
+                        <div class="flex gap-1">
+                          <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
+                          <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
+                          <div class="typing-dot w-2 h-2 bg-slate-400 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Réponse IA -->
+                  <div class="ai-response relative mt-3" style="z-index: 10;">
+                    <div class="flex items-start gap-2">
+                      <div
+                        class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                          </path>
+                        </svg>
+                      </div>
+                      <div class="px-3 py-2 max-w-[75%]">
+                        <div class="text-[11px] leading-relaxed text-slate-700">
+                          La photosynthèse est le processus par lequel les plantes convertissent la
+                          lumière solaire en énergie...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Description -->
+          <div class="mt-6">
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">Chat en temps réel</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Pose toutes tes questions directement à l’IA et reçois des explications claires et personnalisées, instantanément, pour ne jamais rester bloqué.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="p-8 bg-slate-50">
+      <div class="w-full max-w-4xl mx-auto">
+        <!-- Card avec animation -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <!-- Animation Background -->
+          <div class="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 p-6">
+            <div class="flex items-center justify-center p-6">
+              <div class="container w-full max-w-3xl">
+                <!-- Chat Interface -->
+                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                  <div class="p-6 space-y-6">
+                    <!-- Message utilisateur -->
+                    <div class="user-message message-hover rounded-lg p-3 -mx-3 transition-colors">
+                      <div class="flex items-start gap-3">
+                        <div
+                          class="w-7 h-7 rounded-md bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg class="w-4 h-4 text-purple-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </div>
+                        <div class="flex-1 pt-1">
+                          <div class="text-sm text-gray-700 leading-relaxed">Crée un schéma du cycle de l'eau</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Indicateur de génération -->
+                    <div class="thinking-indicator message-hover rounded-lg p-3 -mx-3 transition-colors">
+                      <div class="flex items-start gap-3">
+                        <div
+                          class="w-7 h-7 rounded-md bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                          </svg>
+                        </div>
+                        <div class="flex-1 pt-1">
+                          <div class="inline-flex items-center gap-1.5 px-3 py-2 bg-gray-50 rounded-lg">
+                            <div class="thinking-dot w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                            <div class="thinking-dot w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                            <div class="thinking-dot w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Schéma généré -->
+                    <div class="diagram-container message-hover rounded-lg p-3 -mx-3 transition-colors">
+                      <div class="flex items-start gap-3">
+                        <div
+                          class="w-7 h-7 rounded-md bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="flex-1">
+                          <div class="border border-gray-200 rounded-lg p-6 bg-gray-50/50">
+                            <svg width="100%" height="200" viewBox="0 0 280 180" class="w-full">
+                              <!-- Soleil -->
+                              <g class="sun">
+                                <circle cx="40" cy="35" r="18" fill="#fbbf24" opacity="0.2" />
+                                <circle cx="40" cy="35" r="12" fill="#fbbf24" />
+                                <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round">
+                                  <line x1="40" y1="15" x2="40" y2="20" />
+                                  <line x1="40" y1="50" x2="40" y2="55" />
+                                  <line x1="20" y1="35" x2="25" y2="35" />
+                                  <line x1="55" y1="35" x2="60" y2="35" />
+                                  <line x1="27" y1="22" x2="31" y2="26" />
+                                  <line x1="49" y1="44" x2="53" y2="48" />
+                                  <line x1="27" y1="48" x2="31" y2="44" />
+                                  <line x1="49" y1="26" x2="53" y2="22" />
+                                </g>
+                              </g>
+
+                              <!-- Océan -->
+                              <g class="ocean">
+                                <rect x="15" y="130" width="90" height="35" rx="6" fill="#3b82f6" opacity="0.1" />
+                                <rect x="15" y="130" width="90" height="35" rx="6" fill="none" stroke="#3b82f6"
+                                  stroke-width="2" />
+                                <path d="M 25 140 Q 35 135 45 140 T 65 140 T 85 140" stroke="#3b82f6" stroke-width="1.5"
+                                  fill="none" opacity="0.5" />
+                                <text x="60" y="152" font-size="11" fill="#3b82f6" text-anchor="middle"
+                                  font-weight="500">Océan</text>
+                              </g>
+
+                              <!-- Flèche évaporation -->
+                              <path class="evaporation-arrow" d="M 75 125 Q 100 95 125 70" stroke="#6366f1"
+                                stroke-width="2" fill="none" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+
+                              <!-- Nuage -->
+                              <g class="cloud">
+                                <ellipse cx="145" cy="55" rx="28" ry="16" fill="#e0e7ff" />
+                                <ellipse cx="128" cy="60" rx="22" ry="13" fill="#e0e7ff" />
+                                <ellipse cx="162" cy="60" rx="22" ry="13" fill="#e0e7ff" />
+                                <ellipse cx="145" cy="65" rx="25" ry="11" fill="#c7d2fe" />
+                                <text x="145" y="62" font-size="11" fill="#6366f1" text-anchor="middle"
+                                  font-weight="500">Nuages</text>
+                              </g>
+
+                              <!-- Flèche précipitation -->
+                              <path class="rain-arrow" d="M 165 72 L 205 115" stroke="#6366f1" stroke-width="2"
+                                fill="none" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+
+                              <!-- Montagne -->
+                              <g class="mountain">
+                                <path d="M 170 135 L 210 90 L 250 135 Z" fill="#e5e7eb" />
+                                <path d="M 210 90 L 230 110 L 250 135 L 245 135 L 210 95 Z" fill="#d1d5db" />
+                                <path d="M 205 110 Q 210 118 215 110" stroke="#3b82f6" stroke-width="2.5" fill="none" />
+                                <text x="210" y="145" font-size="11" fill="#6b7280" text-anchor="middle"
+                                  font-weight="500">Montagnes</text>
+                              </g>
+
+                              <!-- Flèche ruissellement -->
+                              <path class="river-arrow" d="M 175 132 Q 135 140 105 140" stroke="#6366f1"
+                                stroke-width="2" fill="none" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+
+                              <!-- Labels des processus -->
+                              <g class="label">
+                                <text x="95" y="100" font-size="9" fill="#6366f1" font-weight="600">Évaporation</text>
+                                <text x="178" y="95" font-size="9" fill="#6366f1" font-weight="600">Précipitation</text>
+                                <text x="125" y="156" font-size="9" fill="#6366f1"
+                                  font-weight="600">Ruissellement</text>
+                              </g>
+
+                              <!-- Définition des flèches -->
+                              <defs>
+                                <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                                  <polygon points="0 0, 8 3, 0 6" fill="#6366f1" />
+                                </marker>
+                              </defs>
+                            </svg>
+                            <div class="mt-4 pt-4 border-t border-gray-200">
+                              <p class="text-xs text-gray-600 font-medium">Le cycle de l'eau</p>
+                              <p class="text-xs text-gray-400 mt-1">L'eau circule continuellement entre l'océan,
+                                l'atmosphère et la terre</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Description -->
+        <div class="mt-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-2">Chat en temps réel avec représentation visuelle</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Transforme tes notions complexes en schémas et représentations visuelles en un clic. Comprends les concepts plus rapidement et mémorise l’essentiel sans frustration.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section 
+  <section id="temoignages" class="py-20 sm:py-28 bg-white dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl mb-4">
+          Ils ont transformé leurs révisions
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+          Découvre comment Wake Up a aidé des milliers d'étudiants à réussir leurs examens
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div
+          class="flex flex-col rounded-xl border border-[#e9e7f3] dark:border-gray-700 bg-background-light dark:bg-[#1f1a30] p-6 hover-lift">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="text-base text-[#1F2937] dark:text-gray-300 flex-grow leading-relaxed">
+            "J'ai divisé mon temps de révision par deux et obtenu 16/20 en biologie moléculaire. Les quiz adaptatifs
+            m'ont permis de cibler exactement mes lacunes. Un game-changer absolu !"
+          </p>
+          <div class="mt-6 flex items-center gap-4">
+            <img class="h-12 w-12 rounded-full object-cover" alt="Photo de Sarah"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDakoPR3v-gFRDbVzlDHKw8yW7jAMacIifVgorAyqSKCxbF0wKqnFLKZvHLg-WQvIq5eLQCjNM8uttfGnjXImizG8vVrpC7WEz_yQIGlYlnnUkWpDs-UyXklCmky8fFHj359W4CpfGdU22Egb23ZWCLhipGwrXY86PgiGADxVE2fDo_qXujPD4zMMH0rvDVSv2D9xOH4aF6Bk5XuniZLHjhglIJhfE20c5Tjdf-1JO0A_1D74w6IFNu2DPLbfZ75rupKKgG4rbi9DWz" />
+            <div>
+              <p class="font-semibold text-black dark:text-white">Sarah M.</p>
+              <p class="text-sm text-[#594c9a] dark:text-gray-400">Étudiante en médecine</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col rounded-xl border border-[#e9e7f3] dark:border-gray-700 bg-background-light dark:bg-[#1f1a30] p-6 hover-lift">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="text-base text-[#1F2937] dark:text-gray-300 flex-grow leading-relaxed">
+            "Les cartes mentales automatiques sont magiques. J'ai enfin compris la thermodynamique après 3 semaines de
+            galère. Je recommande à 100% !"
+          </p>
+          <div class="mt-6 flex items-center gap-4">
+            <img class="h-12 w-12 rounded-full object-cover" alt="Photo de David"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxHnZUpji6X6wLTNzbQ6udT2EUXoMunTNnBsntahpdkVHny2Q6whmfo5NcKdfIASVHTtzWFZvL3SGPQhjOPUmK7wTwGQ5FKka4cQi8JmBrt2FjuNhISYkGgTODJow8HpsM_CQMQ1t_VWDOZEG0wvhdfwtx5qGhRWNPkdng7urfLvhowhlhy6WoMMUNO967h0dhPwy6dFtwZke0wehdDgLkKm79E6P__as-z42NuQYmgb60AYwKB9DJTD5VAjCXsLD6ijFgqmStLq07" />
+            <div>
+              <p class="font-semibold text-black dark:text-white">David C.</p>
+              <p class="text-sm text-[#594c9a] dark:text-gray-400">École d'ingénieurs</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col rounded-xl border border-[#e9e7f3] dark:border-gray-700 bg-background-light dark:bg-[#1f1a30] p-6 hover-lift">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="text-base text-[#1F2937] dark:text-gray-300 flex-grow leading-relaxed">
+            "Le dashboard de progression est ultra motivant. Voir mes scores monter m'a donné envie de continuer.
+            Résultat : mention TB au partiel !"
+          </p>
+          <div class="mt-6 flex items-center gap-4">
+            <img class="h-12 w-12 rounded-full object-cover" alt="Photo de Maria"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6bfi5fdBGvO5DdM7o1QHj9Z7Y21rhNyleLxrK1mEAgKdt-zzX1qgkwgwUE0GY89oMxqOADLunBnfItiKDjsgMvXUSQEteLe32TZapd9b4v_6_rP4YLIhlrjTYkNB1px5gkYU3bhIQD9FhKG7gLxSx7MT3qvkDRBMuAcpivBl7uiEFpgiwI10OOdDXzrCHMriMLzpnblZ2mR1tATuaE_1aorzarHaSfRdHT8r_jjpnuEa4ErAPFTpD6cBBkwdTFFiEeyExycniHQ65" />
+            <div>
+              <p class="font-semibold text-black dark:text-white">Maria G.</p>
+              <p class="text-sm text-[#594c9a] dark:text-gray-400">Étudiante en droit</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Testimonials Section -->
+  <section id="a_venir" class="py-20 sm:py-28 bg-white dark:bg-background-dark">
+    <div class="mx-auto w-full max-w-5xl px-6">
+      <div>
+        <!-- Section Header -->
+        <h2 class="text-black max-w-4xl text-balance text-4xl font-semibold">Wake Up évolue pour rendre vos révisions
+          encore plus intelligentes et immersives.</h2>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Card 1: AI Code Generation -->
+        <div class="group bg-gray-50/70 rounded-lg overflow-hidden border p-6">
+          <h3 class="text-black mt-5 text-lg font-semibold">Podcasts de cours</h3>
+          <p class="text-gray-500 mt-3 text-balance">Bientôt, écoutez vos cours partout. Wake Up transformera vos
+            contenus en podcasts pour réviser sans effort, à tout moment.</p>
+
+          <!-- PodcastIllustration -->
+          <div aria-hidden="true"
+            class="rounded-lg border border-gray-200 bg-white shadow-sm mt-9 aspect-video p-4 flex flex-col justify-between">
+            <!-- Top Part: Title & Art -->
+            <div class="flex items-center gap-3">
+              <!-- Cover Art Placeholder -->
+              <div class="flex-shrink-0 size-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                <!-- Microphone SVG --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="size-6 text-indigo-600">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" x2="12" y1="19" y2="22"></line>
+                </svg>
+              </div>
+              <!-- Title/Author -->
+              <div>
+                <div class="text-sm font-semibold text-gray-900">The AI Revolution</div>
+                <div class="text-sm text-gray-500">with DevTalks</div>
+              </div>
+            </div>
+
+            <!-- Bottom Part: Player Controls -->
+            <div>
+              <!-- Progress Bar -->
+              <div class="w-full bg-gray-200 rounded-full h-1.5 mb-2">
+                <div class="bg-indigo-600 h-1.5 rounded-full" style="width: 35%"></div>
+              </div>
+
+              <!-- Timestamps & Play Button -->
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-500">12:15</span>
+
+                <!-- Play Button -->
+                <div class="size-8 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg">
+                  <!-- Play SVG --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="size-4 ml-0.5">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+
+                <span class="text-xs font-medium text-gray-500">38:40</span>
+              </div>
+            </div>
+          </div>
+          <!-- End PodcastIllustration -->
+        </div>
+
+        <!-- Card 2: Intelligent Code Review -->
+        <div class="group bg-gray-50/70 rounded-lg overflow-hidden border px-6 pt-6">
+          <h3 class="text-black mt-5 text-lg font-semibold">Intégration de sites web</h3>
+          <p class="text-gray-500 mt-3 text-balance">Ajoutez vos sites favoris pour enrichir l’IA. Wake Up apprendra de
+            vos ressources en ligne pour des révisions ultra-ciblées.</p>
+
+          <!-- WebIllustration -->
+          <div aria-hidden="true"
+            class="relative mt-6 transform-gpu transition-transform duration-200 ease-in-out group-hover:translate-y-1">
+            <!-- Browser Window -->
+            <div class="rounded-lg border border-gray-200 bg-white shadow-sm aspect-video w-full overflow-hidden">
+              <!-- Browser Bar -->
+              <div class="bg-gray-100 h-8 flex items-center gap-1.5 px-3 border-b border-gray-200">
+                <div class="size-2.5 rounded-full bg-red-400"></div>
+                <div class="size-2.5 rounded-full bg-yellow-400"></div>
+                <div class="size-2.5 rounded-full bg-green-400"></div>
+              </div>
+              <!-- Page Content -->
+              <div class="p-3 space-y-3">
+                <div class="bg-indigo-500 h-8 w-1/3 rounded"></div>
+                <div class="space-y-1.5 pt-1">
+                  <div class="bg-gray-200 h-2 rounded-full"></div>
+                  <div class="bg-gray-200 h-2 w-5/6 rounded-full"></div>
+                  <div class="bg-gray-200 h-2 w-3/4 rounded-full"></div>
+                </div>
+                <div class="bg-indigo-100 h-16 w-full rounded-md"></div>
+              </div>
+            </div>
+          </div>
+          <!-- End WebIllustration -->
+        </div>
+
+        <!-- Card 3: Contextual AI Assistant -->
+        <div class="group bg-gray-50/70 rounded-lg overflow-hidden border px-6 pt-2">
+          <h3 class="text-black mt-5 text-lg font-semibold">Simulations d’examen</h3>
+          <p class="text-gray-500 mt-3 text-balance">Préparez vos examens comme jamais. L’IA générera des tests
+            réalistes et vous montrera exactement où concentrer vos efforts.</p>
+
+          <!-- ExamIllustration (Feuille d'examen avec score) -->
+          <div class="mask-b-from-50 -mx-2 -mt-2 px-2">
+            <div aria-hidden="true"
+              class="rounded-lg border border-gray-200 bg-white shadow-sm mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover:translate-y-0 flex flex-col relative overflow-hidden">
+              <!-- En-tête de la feuille -->
+              <div class="flex justify-between items-center mb-3">
+                <h4 class="font-semibold text-gray-900 text-sm">Examen</h4>
+              </div>
+
+
+
+              <!-- Le score /20 positionné en haut à droite -->
+              <div class="absolute top-4 right-4  text-red-500 text-lg font-bold px-3 py-1 rounded-full shadow-md">
+                /20
+              </div>
+            </div>
+          </div>
+          <!-- End ExamIllustration -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+<section id="faq" class="py-24 bg-gray-50 dark:bg-black/20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-black dark:text-white sm:text-4xl mb-4">
+        Questions fréquentes
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Tout ce que tu dois savoir avant de rejoindre la bêta
+      </p>
+    </div>
+
+    <div class="space-y-6">
+
+      <div class="bg-white dark:bg-[#1f1a30] rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-black dark:text-white mb-2">
+          Qu’est-ce que Wake Up apporte de vraiment nouveau ?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Wake Up transforme tes cours en véritables parcours d’apprentissage intelligent.  
+          L’IA analyse tes documents pour générer des quiz adaptés, des cartes mentales automatiques et un suivi de progression clair.  
+          Fini les révisions à l’aveugle : chaque session devient ciblée et efficace.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#1f1a30] rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-black dark:text-white mb-2">
+          L’app n’est pas encore en ligne : pourquoi m’inscrire maintenant ?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          En rejoignant la liste d’attente, tu feras partie des premiers testeurs à accéder gratuitement à la version bêta.  
+          Tu pourras influencer le développement, tester les nouveautés avant tout le monde  
+          et profiter d’avantages exclusifs sur la version finale.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#1f1a30] rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-black dark:text-white mb-2">
+          Est-ce que c’est vraiment gratuit ?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Oui, 100%. L’accès à la bêta est entièrement gratuit et ne demande aucune carte bancaire.  
+          Nous voulons que tu découvres tout le potentiel de Wake Up avant qu’il ne devienne public.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#1f1a30] rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-black dark:text-white mb-2">
+          Wake Up fonctionnera-t-il pour mon domaine d’étude ?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Absolument. Que tu étudies le droit, la médecine, la psychologie ou le commerce,  
+          l’IA s’adapte à tes propres cours pour créer du contenu personnalisé et pertinent.  
+          Tu fournis les documents, Wake Up s’occupe du reste.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-[#1f1a30] rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-black dark:text-white mb-2">
+          Comment mes données seront-elles protégées ?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Tes documents et données personnelles sont chiffrés et stockés de manière sécurisée.  
+          Nous ne revendons ni ne partageons aucune information.  
+          La confidentialité fait partie de l’ADN de Wake Up.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Final CTA Section -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="text-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-2xl p-10 lg:p-16 border-2 border-primary/20">
+        <h2 class="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-5xl mb-6">
+          Prêt à révolutionner<br />tes révisions ?
+        </h2>
+
+        <!-- Stats inline -->
+        <div class="flex flex-wrap justify-center gap-8 mb-10">
+          <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-800 dark:text-gray-200 font-semibold">Reçois toutes les infos et participe à la co-création de Wake Up</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-gray-800 dark:text-gray-200 font-semibold">Sans carte bancaire</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-3 max-w-xl mx-auto">
+          <input type="email" placeholder="ton-email@exemple.fr"
+            class="flex-1 h-14 px-6 rounded-xl border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-lg" />
+          <button
+            class="h-14 px-8 bg-primary text-white text-lg font-bold rounded-xl hover:bg-opacity-90 transition shadow-lg shadow-primary/30">
+            Commencer maintenant →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-black/20 border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div class="flex items-center gap-4 text-[#100d1b] dark:text-white">
+          <div class="text-primary">
+            <a href="#">
+            <img src="static/images/Logo-black.svg" alt="Wake Up Logo"
+              class="h-8 w-8 object-contain" />
+              </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <a class="text-sm text-[#594c9a] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition"
+            href="#">Politique de confidentialité</a>
+          <a class="text-sm text-[#594c9a] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition"
+            href="#">Conditions d'utilisation</a>
+          <a class="text-sm text-[#594c9a] dark:text-gray-400 hover:text-primary dark:hover:text-primary transition"
+            href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

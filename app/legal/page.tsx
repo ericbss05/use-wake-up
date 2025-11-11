@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
         <p>
           Merci de votre visite sur Wake Up. Cette politique de confidentialité décrit
           comment nous collectons, utilisons et protégeons vos informations personnelles et
-          non personnelles lorsque vous utilisez notre site web à l&apos;adresse https://vocalis-ai-six.vercel.app
+          non personnelles lorsque vous utilisez notre site web à l&apos;adresse https://use-wake-up-lrqw.vercel.app/
         </p>
 
         <p>

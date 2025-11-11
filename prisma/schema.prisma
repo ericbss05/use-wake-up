@@ -9,7 +9,9 @@ datasource db {
 }
 
 model Subscriber {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(cuid())
   email     String   @unique
+  token     String   @unique
+  used      Boolean  @default(false)
   createdAt DateTime @default(now())
 }

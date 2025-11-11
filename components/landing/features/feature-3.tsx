@@ -31,7 +31,7 @@ export const Feature3 = () => {
                         </div>
                         <div className="flex-1 pt-0.5 sm:pt-1">
                           <div className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                            Crée un schéma du cycle de l'eau
+                            Crée un schéma du cycle de l&apos;eau
                           </div>
                         </div>
                       </div>
@@ -135,11 +135,11 @@ export const Feature3 = () => {
 
                             <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
                               <p className="text-xs font-medium text-gray-600">
-                                Le cycle de l'eau
+                                Le cycle de l&apos;eau
                               </p>
                               <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                                L'eau circule continuellement entre l'océan,
-                                l'atmosphère et la terre
+                                L&apos;eau circule continuellement entre l&apos;océan,
+                                l&apos;atmosphère et la terre
                               </p>
                             </div>
                           </div>
@@ -160,7 +160,7 @@ export const Feature3 = () => {
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Transforme tes notions complexes en schémas et représentations
             visuelles en un clic. Comprends les concepts plus rapidement et
-            mémorise l'essentiel sans frustration.
+            mémorise l&apos;essentiel sans frustration.
           </p>
         </div>
       </div>

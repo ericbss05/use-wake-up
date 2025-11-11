@@ -1,7 +1,6 @@
 // lib/pinecone.ts
 import { Pinecone, PineconeRecord } from "@pinecone-database/pinecone";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
-
 import md5 from "md5";
 import { Document } from "@langchain/core/documents";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
@@ -70,7 +69,9 @@ export const truncateStringByBytes = (str: string, bytes: number) => {
 };
 
 async function prepareDocument(page: PDFPage) {
-  let { pageContent, metadata } = page;
+  let { pageContent } = page;
+  const { metadata } = page; // ✅ Correction : 'metadata' est une constante
+
   pageContent = pageContent.replace(/\n/g, "");
 
   const splitter = new RecursiveCharacterTextSplitter();
@@ -83,6 +84,7 @@ async function prepareDocument(page: PDFPage) {
       },
     }),
   ]);
+
   return docs;
 }
 

@@ -10,7 +10,6 @@ export async function GET(req: Request) {
       return NextResponse.json({ valid: false, error: 'Token manquant' }, { status: 400 });
     }
 
-    // Chercher le token dans la base
     const subscriber = await prisma.subscriber.findFirst({
       where: { token },
     });
@@ -19,7 +18,6 @@ export async function GET(req: Request) {
       return NextResponse.json({ valid: false, error: 'Token inexistant' }, { status: 401 });
     }
 
-    // Marquer le token comme utilisé pour KPI (mais ne bloque pas l'accès)
     if (!subscriber.used) {
       await prisma.subscriber.update({
         where: { id: subscriber.id },
@@ -27,10 +25,11 @@ export async function GET(req: Request) {
       });
     }
 
-    // Token valide, peu importe s'il a déjà été utilisé
     return NextResponse.json({ valid: true }, { status: 200 });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Erreur API verify-token :', err);
-    return NextResponse.json({ valid: false, error: err.message }, { status: 500 });
+
+    const message = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ valid: false, error: message }, { status: 500 });
   }
 }

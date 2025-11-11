@@ -29,7 +29,7 @@ const Avantages: React.FC = () => {
                 <p className="font-semibold"><span className="text-red-500">✕</span> Tu ne sais pas ce que tu maîtrises vraiment</p>
               </li>
               <li className="flex items-start text-[#1F2937] dark:text-gray-300">
-                <p className="font-semibold"><span className="text-red-500">✕</span> Motivation qui s'effondre au bout de 2h</p>
+                <p className="font-semibold"><span className="text-red-500">✕</span> Motivation qui s&apos;effondre au bout de 2h</p>
               </li>
               <li className="flex items-start text-[#1F2937] dark:text-gray-300">
                 <p className="font-semibold"><span className="text-red-500">✕</span> Pas de méthode, juste du bachotage</p>
@@ -61,7 +61,7 @@ const Avantages: React.FC = () => {
               </li>
               <li className="flex items-start text-[#1F2937] dark:text-gray-300">
                 <span className="text-green-500 mr-3 mt-1 text-2xl">✓</span>
-                <p className="font-semibold">L'IA t'indique tes lacunes et te conseils en consequence</p>
+                <p className="font-semibold">L&apos;IA t&apos;indique tes lacunes et te conseils en consequence</p>
               </li>
               <li className="flex items-start text-[#1F2937] dark:text-gray-300">
                 <span className="text-green-500 mr-3 mt-1 text-2xl">✓</span>

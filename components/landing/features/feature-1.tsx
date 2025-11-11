@@ -37,7 +37,7 @@ export const Feature1 = () => {
                 </div>
 
                 <div className="space-y-2 mb-3 relative">
-                  {['A', 'B', 'C', 'D'].map((option, i) => (
+                  {['A', 'B', 'C', 'D'].map((option) => (
                     <div
                       key={option}
                       className={`border-2 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 bg-white transition-all
@@ -139,7 +139,7 @@ export const Feature1 = () => {
                         </h3>
                         <p className="text-blue-800 text-[8px] sm:text-[10px] leading-relaxed">
                           Le Quiz IA analyse ton niveau et crée des questions personnalisées
-                          qui s'adaptent à tes points forts et faibles.
+                          qui s&apos;adaptent à tes points forts et faibles.
                         </p>
                       </div>
                     </div>

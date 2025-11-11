@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image';
 
 const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -21,10 +22,12 @@ const Header = () => {
                     <div className="flex items-center gap-1 text-[#100d1b] dark:text-white">
                         <Link href="/" className="flex items-center gap-1">
                             <div className="text-blue-500">
-                                <img
+                                <Image
                                     src="/images/Logo-black.svg"
                                     alt="Wake Up Logo"
-                                    className="h-8 w-8 object-contain"
+                                    className="object-contain"
+                                    width={24}
+                                    height={24}
                                 />
                             </div>
                             <h2 className="text-lg font-bold tracking-[-0.015em]">ake up</h2>

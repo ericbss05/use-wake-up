@@ -6,8 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft, UploadCloud, X } from 'lucide-react';
 
-interface FileUploaderProps { 
+interface FileUploaderProps {
   onBack: () => void;
+  onUploadComplete?: (namespaceValue: string) => void;
 }
 
 const Step2: React.FC<FileUploaderProps> = ({ onBack }) => {
@@ -43,7 +44,6 @@ const Step2: React.FC<FileUploaderProps> = ({ onBack }) => {
     setIsUploading(true);
 
     try {
-      let mainNamespace = '';
 
       for (const file of files) {
         const formData = new FormData();
@@ -56,17 +56,18 @@ const Step2: React.FC<FileUploaderProps> = ({ onBack }) => {
         console.log('PDF analysé :', data);
 
         if (data.namespace) {
-          mainNamespace = data.namespace;
-
           // Stockage dans localStorage
           const stored = localStorage.getItem('pineconeNamespaces');
-          let namespaces: string[] = stored ? JSON.parse(stored) : [];
+          const namespaces: string[] = stored ? JSON.parse(stored) : [];
+
           if (!namespaces.includes(data.namespace)) {
             namespaces.push(data.namespace);
             localStorage.setItem('pineconeNamespaces', JSON.stringify(namespaces));
           }
+
           console.log('✅ Namespace enregistré dans localStorage :', data.namespace);
         }
+
       }
 
       alert('Tous les fichiers ont été analysés avec succès !');

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const OnboardingForm: React.FC = () => {
   const [step, setStep] = useState(1);
-  const [namespace, setNamespace] = useState<string | null>(null);
+  const [, setNamespace] = useState<string | null>(null);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100">
@@ -37,7 +37,7 @@ const OnboardingForm: React.FC = () => {
             <Step2
               onBack={() => setStep(1)}
               onUploadComplete={(namespaceValue: string) => {
-                setNamespace(namespaceValue);
+                setNamespace(namespaceValue); // garde le setter pour usage futur
                 setStep(3);
               }}
             />

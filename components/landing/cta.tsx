@@ -6,7 +6,7 @@ import { useState } from "react";
 const Cta = () => {
   const [email, setEmail] = useState("");
       const [loading, setLoading] = useState(false);
-      const [message, setMessage] = useState<string | null>(null);
+      const [, setMessage] = useState<string | null>(null);
   
       const handleSubmit = async (e: React.FormEvent) => {
           e.preventDefault();

@@ -16,8 +16,8 @@ const HowItWork = () => {
           Comment ça marche
         </h2>
         <p className="text-sm text-slate-500 dark:text-gray-400 mt-2">
-          Wake Up analyse tes cours et crée un parcours d'apprentissage
-          personnalisé. Tout est automatique, tu te concentres sur l'essentiel :
+          Wake Up analyse tes cours et crée un parcours d&apos;apprentissage
+          personnalisé. Tout est automatique, tu te concentres sur l&apos;essentiel :
           apprendre.
         </p>
       </div>

@@ -39,8 +39,10 @@ export async function POST(req: Request) {
     }
 
     return new Response(JSON.stringify({ success: true, data }), { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Endpoint error:', error);
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+
+     const message = error instanceof Error ? error.message : String(error);
+    return new Response(JSON.stringify({ error: message }), { status: 500 });;
   }
 }

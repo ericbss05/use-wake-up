@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
   console.log("POST /api/upload appelé");
 
   try {
+    // Récupérer le fichier envoyé via FormData
     const formData = await req.formData();
     const uploadedFile = formData.get("file");
 
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Fichier manquant" }, { status: 400 });
     }
 
-    // Chemin temporaire compatible Vercel
+    // Utiliser le dossier temporaire autorisé sur Vercel
     const tempFilePath = path.join("/tmp", `${uuidv4()}.pdf`);
 
     // Sauvegarder le fichier temporairement

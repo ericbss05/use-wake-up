@@ -13,7 +13,7 @@ interface FileUploaderProps {
 
 const Step2: React.FC<FileUploaderProps> = ({ onBack }) => {
   const router = useRouter();
-  const MAX_FILES = 50;
+  const MAX_FILES = 1;
   const SUPPORTED_TYPES = ['application/pdf'];
   const inputRef = useRef<HTMLInputElement>(null);
 

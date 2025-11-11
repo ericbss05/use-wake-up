@@ -9,36 +9,40 @@ import { loadLocalPDFIntoPinecone, convertToAscii } from "@/lib/pinecone";
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
+  console.log("POST /api/upload appelé");
+
   try {
+    // Récupérer le fichier envoyé via FormData
     const formData = await req.formData();
     const uploadedFile = formData.get("file");
 
     if (!uploadedFile || typeof uploadedFile === "string") {
+      console.warn("Fichier manquant ou invalide");
       return NextResponse.json({ error: "Fichier manquant" }, { status: 400 });
     }
 
-    // Générer un nom temporaire
-    const tempDir = path.join(process.cwd(), "temp");
-    await fs.mkdir(tempDir, { recursive: true });
-    const tempFilePath = path.join(tempDir, `${uuidv4()}.pdf`);
+    // Utiliser le dossier temporaire autorisé sur Vercel
+    const tempFilePath = path.join("/tmp", `${uuidv4()}.pdf`);
 
-    // Sauvegarder le fichier
+    // Sauvegarder le fichier temporairement
     const buffer = Buffer.from(await uploadedFile.arrayBuffer());
     await fs.writeFile(tempFilePath, buffer);
+    console.log("Fichier temporaire créé :", tempFilePath);
 
     // Appeler ton loader + Pinecone
     const result = await loadLocalPDFIntoPinecone(tempFilePath);
 
-    // Récupérer le namespace correspondant
+    // Générer un namespace
     const namespaceId = convertToAscii(tempFilePath);
 
     // Supprimer le fichier temporaire
     await fs.unlink(tempFilePath);
+    console.log("Fichier temporaire supprimé");
 
     return NextResponse.json({
       success: true,
       data: result,
-      namespace: namespaceId, // <- ici tu as l'ID du namespace
+      namespace: namespaceId,
     });
   } catch (error) {
     console.error("Erreur upload PDF:", error);

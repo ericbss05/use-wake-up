@@ -29,7 +29,7 @@ export const EmailTemplate = (Link: string) => {
 
           <tr>
             <td style="padding-bottom:24px;">
-              <a href="${domain}/4-Techniques-Scientifiques-pour-Reviser-Efficacement.pdf"
+              <a href="${domain}/4-Techniques-Scientifiques-pour-Réviser-Efficacement.pdf"
                 style="display:inline-block; background-color:#346EFD; color:#fff; padding:14px 24px; border-radius:8px; text-decoration:none; font-weight:600;">
                 📘 Télécharger le guide
               </a>

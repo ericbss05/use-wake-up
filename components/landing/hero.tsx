@@ -111,7 +111,10 @@ const Hero = () => {
                             </Button>
                         </form>
 
-
+                        {/* 📨 Petit message sous le formulaire */}
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 text-center">
+                            📬 Si tu ne vois pas le mail dans les 2 minutes, vérifie ton dossier <strong>spam</strong> ou “<strong>Promotions</strong>”.
+                        </p>
                     </div>
 
                     {/* Image / mockup */}
